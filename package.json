@@ -1,0 +1,14 @@
+{
+  "name": "v2.breakingdarkness.com",
+  "type": "module",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "open http://localhost:4321/ && astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.16.4"
+  }
+}
