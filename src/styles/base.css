@@ -1,0 +1,115 @@
+:root {
+  --white: #ffffff;
+  --light: #c0c6ce;
+  --gray: #808c9d;
+  --dark: #1d2633;
+  --darker: #111b28;
+  --black: #000000;
+  --shadow: rgba(0, 0, 0, 0.666);
+  --accent: #2dafd0;
+  --accent-bright: #65c8e2;
+
+  --font-stack: "PT Sans", system-ui, Helvetica, sans-serif;
+  --default-weight: 400;
+  --heading-weight: 700;
+  --font-xl: 1.5rem;
+  --font-lg: 1.1rem;
+  --font-md: 0.8rem;
+  --font-sm: 0.6rem;
+
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-stack);
+  font-weight: var(--default-weight);
+  font-size: 16px;
+
+  @media (min-width: 480px) {
+    font-size: 18px;
+  }
+  @media (min-width: 960px) {
+    font-size: 20px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 22px;
+  }
+}
+
+body {
+  color: var(--white);
+  background: var(--black);
+  text-shadow: 0 1px 1em var(--shadow);
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1,
+.u-font-xl {
+  font-size: var(--font-xl);
+  line-height: 1;
+}
+
+h2,
+.u-font-lg {
+  font-size: var(--font-lg);
+  line-height: 1;
+}
+
+h3,
+.u-font-md {
+  font-size: var(--font-md);
+}
+
+h4,
+h5,
+h6,
+.u-font-sm {
+  font-size: var(--font-sm);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-weight: var(--heading-weight);
+  color: var(--white);
+}
+
+p,
+li {
+  color: var(--light);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.125em;
+  transition: color 0.2s ease-out;
+}
+a:hover,
+a:focus {
+  color: var(--accent-bright);
+}
+
+.u-container {
+  max-width: 100%;
+  width: 60rem;
+  margin: auto;
+}
+
+.u-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
