@@ -8,6 +8,7 @@
   --shadow: rgba(0, 0, 0, 0.666);
   --accent: #2dafd0;
   --accent-bright: #65c8e2;
+  --accent-glow: rgba(45, 175, 208, 0.5);
 
   --font-stack: "PT Sans", system-ui, Helvetica, sans-serif;
   --default-weight: 400;

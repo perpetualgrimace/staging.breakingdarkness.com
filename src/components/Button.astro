@@ -1,0 +1,33 @@
+---
+const { href } = Astro.props;
+---
+
+<a class="button" href={href} target={href.indexOf("#") != 0 ? "_blank" : null}><slot /></a>
+
+<style>
+  .button {
+    display: inline-block;
+    padding: 0.5em 2em;
+    font-weight: var(--heading-weight);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.0625em;
+    color: var(--black);
+    background-color: var(--accent);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(0, 0, 0, 0.05) 100%
+    );
+    border: 1px solid var(--accent);
+    border-radius: var(--border-radius);
+    text-shadow: none;
+    transition-property: background-color, box-shadow;
+  }
+
+  .button:hover,
+  .button:focus {
+    background-color: var(--accent-bright);
+    box-shadow: 0 0 1rem var(--accent-glow);
+  }
+</style>

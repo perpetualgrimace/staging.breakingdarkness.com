@@ -1,24 +1,32 @@
 ---
-
+import Button from "../components/Button.astro";
 ---
 
 <header class="hero" role="banner">
   <div class="hero-inner u-container">
-    <img
-      class="hero-heading-logo"
-      src="logo.png"
-      srcset="logo.png 1x, logo@2x.png 2x"
-      width="281"
-      alt=""
-      draggable="false"
-    />
+    <div class="hero-lockup">
+      <img
+        class="hero-lockup-logo"
+        src="logo.png"
+        srcset="logo.png 1x, logo@2x.png 2x"
+        width="281"
+        alt=""
+        draggable="false"
+      />
 
-    <h1 class="hero-heading-text u-heading u-font-xl">
-      <span class="u-visually-hidden">Breaking Darkness Music Festival: </span>
-      Promoting Unity, Fellowship, Hope, and Redemption
-    </h1>
+      <div class="hero-lockup-text">
+        <h1 class="hero-lockup-text u-heading u-font-xl">
+          <span class="u-visually-hidden">Breaking Darkness Music Festival: </span>
+          Promoting Unity, Fellowship, Hope, and Redemption
+        </h1>
 
-    <p class="u-font-lg">All ticket proceeds benefit Christian outreach for drug addiction.</p>
+        <p class="u-font-lg">All ticket proceeds benefit Christian outreach for drug addiction.</p>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <Button href="#tickets">Buy tickets</Button>
+    </div>
   </div>
 </header>
 
