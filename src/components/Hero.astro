@@ -1,5 +1,6 @@
 ---
 import Button from "../components/Button.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <header class="hero" role="banner">
@@ -15,7 +16,7 @@ import Button from "../components/Button.astro";
       />
 
       <div class="hero-lockup-text">
-        <h1 class="hero-lockup-text u-heading u-font-xl">
+        <h1 class="hero-lockup-heading u-heading u-font-xl">
           <span class="u-visually-hidden">Breaking Darkness Music Festival: </span>
           Promoting Unity, Fellowship, Hope, and Redemption
         </h1>
@@ -24,23 +25,51 @@ import Button from "../components/Button.astro";
       </div>
     </div>
 
-    <div class="hero-cta">
-      <Button href="#tickets">Buy tickets</Button>
-    </div>
+    <p class="hero-cta">
+      <Button href="#tickets">Buy tickets</Button> or <a href="#contact">get directions to venue</a>
+    </p>
+
+    <Socials />
   </div>
 </header>
 
-<style>
+<style is:global>
   .hero {
     display: flex;
     padding: 3rem 1rem;
     width: 100%;
     min-height: calc(40vh + 10vw);
-    background-image: url("hero-bg.jpg");
+    background-image: url("hero-bg@2x.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 100% 100%;
+    background-position: 100% 90%;
+
+    @media (min-width: 900px) {
+      background-size: 55%;
+    }
   }
-  .hero-inner {
+  .hero-lockup {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 35rem;
+    max-width: 100%;
+  }
+  .hero-lockup-logo {
+    flex: 0 0 14rem;
+    margin-right: 2rem;
+    margin-bottom: 1.25rem;
+  }
+  .hero-lockup-text {
+    flex: 1 1 19rem;
+  }
+  .hero-lockup-heading {
+    margin-top: 0;
+  }
+  .hero-cta {
+    margin-bottom: 2rem;
+  }
+  .hero-cta .button {
+    margin-right: 0.25rem;
   }
 </style>

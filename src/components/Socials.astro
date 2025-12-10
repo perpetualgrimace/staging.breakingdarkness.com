@@ -1,0 +1,69 @@
+---
+import FacebookIcon from "../components/icons/FacebookIcon.astro";
+import InstagramIcon from "../components/icons/InstagramIcon.astro";
+import SpotifyIcon from "../components/icons/SpotifyIcon.astro";
+---
+
+<ul class="socials">
+  <li class="socials-item">
+    <a
+      class="socials-link u-font-sm"
+      href="https://facebook.com/breakingdarknessfest"
+      target="_blank"
+    >
+      <FacebookIcon /> Follow on Facebook
+    </a>
+  </li>
+  <li class="socials-item">
+    <a
+      class="socials-link u-font-sm"
+      href="https://instagram.com/breakingdarknessfest"
+      target="_blank"
+    >
+      <InstagramIcon /> Follow on Instagram
+    </a>
+  </li>
+  <li class="socials-item">
+    <a class="socials-link u-font-sm" href="https://open.spotify.com" target="_blank">
+      <SpotifyIcon /> 2026 artist playlist
+    </a>
+  </li>
+</ul>
+
+<style is:global>
+  .socials {
+    width: max-content;
+    max-width: 100%;
+    display: block;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .socials-item {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  .socials-link {
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    text-decoration: none;
+    padding: 0.5em 0.5em 0.5em 0;
+  }
+  .socials-link svg {
+    margin-right: 0.25em;
+    width: 2em;
+    transition: transform 0.2s ease-out;
+  }
+  .socials-link svg path {
+    fill: var(--gray);
+    transition: fill 0.2s ease-out;
+  }
+  .socials-link:hover svg,
+  .socials-link:focus svg {
+    transform: scale(1.0666);
+  }
+  .socials-link:hover svg path,
+  .socials-link:focus svg path {
+    fill: currentColor;
+  }
+</style>

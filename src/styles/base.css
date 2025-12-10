@@ -52,13 +52,13 @@ body {
 h1,
 .u-font-xl {
   font-size: var(--font-xl);
-  line-height: 1;
+  line-height: 1.25;
 }
 
 h2,
 .u-font-lg {
   font-size: var(--font-lg);
-  line-height: 1;
+  line-height: 1.375;
 }
 
 h3,
