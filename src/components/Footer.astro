@@ -1,0 +1,73 @@
+---
+import NavLinks from "../components/NavLinks.astro";
+import Socials from "../components/Socials.astro";
+---
+
+<footer class="footer">
+  <a class="footer-logo-link" href="#top">
+    <img
+      class="footer-logo"
+      src="logo.png"
+      srcset="logo.png 1x, logo@2x.png 2x"
+      width="165"
+      alt=""
+      draggable="false"
+    />
+  </a>
+
+  <NavLinks />
+
+  <div class="footer-colophon" role="contentinfo">
+    <p class="u-font-md">Promoting unity, fellowship, hope and redemption.</p>
+    <p class="u-font-sm">
+      © 2024-2026 Breaking Darkness Music Festival. Website by
+      <a href="https://jamesferrell.me" target="_blank">James Ferrell</a>.
+    </p>
+  </div>
+
+  <Socials />
+</footer>
+
+<style is:global>
+  .footer {
+    padding: 3rem 1rem 1rem 1rem;
+    background-color: var(--darker);
+  }
+
+  .footer {
+    text-align: center;
+  }
+  .footer .socials {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-logo-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .footer-logo {
+    width: 8.3rem;
+    height: auto;
+  }
+  .footer .nav-links {
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 666px) {
+    .footer .nav-item:first-of-type {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .footer .nav-item .button {
+      width: 10rem;
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  .footer-colophon {
+    margin-bottom: 1.75rem;
+  }
+  .footer-colophon > p {
+    line-height: 1;
+  }
+</style>

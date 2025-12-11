@@ -114,3 +114,8 @@ a:focus {
   white-space: nowrap;
   width: 1px;
 }
+
+.u-list-reset {
+  list-style-type: none;
+  padding-left: 0;
+}
