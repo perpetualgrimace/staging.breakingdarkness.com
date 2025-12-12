@@ -1,0 +1,54 @@
+---
+import Button from "./Button.astro";
+import Card from "./Card.astro";
+---
+
+<section id="tickets" class="tickets-section section">
+  <div class="u-container">
+    <h2 class="section-heading u-font-xl">2026 Advance Tickets & Add-Ons</h2>
+    <div class="tickets-layout">
+      <Button href="#" subtext="$15 plus tax">Single ticket</Button>
+      <Button href="#" subtext="$52 plus tax">Four ticket pack</Button>
+      <Button href="#" subtext="$62 plus tax">Six ticket pack</Button>
+      <Button href="#" subtext="$10 plus tax">VIP early entry add-on</Button>
+    </div>
+    <ul class="addon-deck u-list-reset">
+      <Card heading="Festival Shirt" caption="($18 PLUS TAX)" buttonUrl="#" />
+      <Card heading="Poster Kit" caption="($12 PLUS TAX)" buttonUrl="#" />
+      <Card heading="Souvenir Lanyard" caption="($8 PLUS TAX)" buttonUrl="#" />
+    </ul>
+  </div>
+</section>
+
+<style is:global>
+  .tickets-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+  }
+  .tickets-layout .button {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 14rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.2rem;
+    margin: 0.5rem;
+  }
+  .addon-deck {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem -0.5rem;
+  }
+  .addon-deck .card {
+    margin: 0.5rem;
+    flex: 1 0 auto;
+    text-align: center;
+  }
+  .addon-deck .card:first-of-type {
+    flex: 1 1 auto;
+  }
+  .addon-deck .button {
+    font-size: var(--font-sm);
+  }
+</style>

@@ -1,8 +1,11 @@
 ---
-const { href } = Astro.props;
+const { href, subtext } = Astro.props;
 ---
 
-<a class="button" href={href} target={href.indexOf("#") != 0 ? "_blank" : null}><slot /></a>
+<a class="button" href={href} target={href.indexOf("#") != 0 ? "_blank" : null}>
+  <slot />
+  {subtext ? <span class="button-subtext u-font-md">({subtext})</span> : null}
+</a>
 
 <style>
   .button {
@@ -29,5 +32,9 @@ const { href } = Astro.props;
   .button:focus {
     background-color: var(--accent-bright);
     box-shadow: 0 0 1rem var(--accent-glow);
+  }
+
+  .button-subtext {
+    font-weight: var(--default-weight);
   }
 </style>
