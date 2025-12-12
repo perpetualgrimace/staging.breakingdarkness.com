@@ -1,0 +1,89 @@
+---
+import EmailIcon from "./icons/EmailIcon.astro";
+---
+
+<section id="contact" class="contact-section section">
+  <div class="u-container">
+    <h2 class="section-heading u-font-xl">Contact us</h2>
+
+    <div class="contact-layout">
+      <div class="contact-map">
+        <iframe
+          class="contact-map-iframe u-absolute-expand"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6477.414008954863!2d-81.3572564!3d35.7334237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88512fae49a545af%3A0xedbab99918810dc6!2sThe%20Premier!5e0!3m2!1sen!2sus!4v1765565021033!5m2!1sen!2sus"
+          width="600"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="contact-text">
+        <h3 class="contact-venue-heading">
+          Festival venue: <br />
+          <span class="u-font-xl">The Premier</span>
+        </h3>
+        <p class="contact-venue-address u-font-md">
+          109 11th St NW <br />
+          Hickory, NC 28601
+        </p>
+        <p class="contact-venue-url u-font-md">
+          <a href="https://hickorypremier.com" target="_blank">hickorypremier.com</a>
+        </p>
+
+        <h3 class="contact-email-heading u-font-lg">All queries & media requests:</h3>
+        <p class="contact-email u-font-md">
+          <a class="contact-email-link" href="mailto:breakingdarkness@proton.me">
+            <EmailIcon />
+            <span class="contact-email-link-text">breakingdarkness@proton.me</span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .contact-map {
+    flex: 1 0 auto;
+    overflow: hidden;
+    padding-bottom: 40%;
+    position: relative;
+    height: 0;
+    margin-bottom: 1.5rem;
+  }
+  @media (min-width: 666px) {
+    .contact-layout {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .contact-map {
+      margin-right: 2rem;
+    }
+  }
+
+  .contact-venue-heading {
+    line-height: 1;
+    margin-top: 0;
+  }
+  .contact-venue-address {
+    margin: -0.5em 0;
+  }
+
+  .contact-email-heading {
+    margin-top: 1.5rem;
+    margin-bottom: -0.5rem;
+  }
+  .contact-email-link {
+    display: inline-flex;
+    align-items: center;
+  }
+  .contact-email-link svg {
+    width: 1.25em;
+    height: auto;
+    margin-right: 0.5em;
+    transform: translateY(1px);
+  }
+</style>
