@@ -1,0 +1,51 @@
+---
+import NavLinks from "../components/NavLinks.astro";
+---
+
+<div class="nav">
+  <nav class="nav-inner">
+    <a class="nav-logo-link" href="#top">
+      <img
+        class="nav-logo"
+        src="logo.png"
+        srcset="logo.png 1x, logo@2x.png 2x"
+        width="110"
+        alt=""
+        draggable="false"
+      />
+    </a>
+
+    <NavLinks />
+  </nav>
+</div>
+
+<style is:global>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    overflow: hidden;
+    background-color: var(--dark);
+    padding: 0 1rem;
+    display: flex;
+    box-shadow: 0 1px 1rem var(--shadow);
+  }
+  @media (max-width: 749px) {
+    .nav {
+      display: none;
+    }
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav-logo {
+    width: 5.5rem;
+    height: auto;
+    margin-right: auto;
+  }
+</style>
