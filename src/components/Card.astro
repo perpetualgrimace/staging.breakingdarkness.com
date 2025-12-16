@@ -12,6 +12,7 @@ const {
   buttonUrl,
   buttonText = "Purchase Add-On",
   bandUrl,
+  bandUrlLabel,
   bandFacebook,
   bandInstagram,
   bandSpotify,
@@ -19,55 +20,89 @@ const {
 ---
 
 <li class="card">
-  <img class="card-img" src={imgHref} />
+  <img class="card-img" src={imgHref} draggable="false" loading="lazy" />
   <div class="card-content">
     <h3 class="card-heading u-font-lg">{heading}</h3>
-    {bandUrl && <a href={`https://${bandUrl}`}>{bandUrl}</a>}
-    {caption && <p class="card-caption u-font-md">{caption}</p>}
+    {
+      (bandUrl || bandFacebook) && (
+        <a
+          class="card-url u-font-sm"
+          href={bandUrl ? `https://${bandUrl}` : bandFacebook}
+          target="_blank"
+        >
+          {bandUrlLabel || bandUrl || "facebook.com"}
+        </a>
+      )
+    }
+    {caption && <p class="card-caption u-font-sm">{caption}</p>}
     {buttonUrl && <Button href={buttonUrl}>{buttonText}</Button>}
-    {
-      bandFacebook && (
-        <a href={bandFacebook} target="_blank">
-          <FacebookIcon />
-        </a>
-      )
-    }
-    {
-      bandInstagram && (
-        <a href={bandInstagram} target="_blank">
-          <InstagramIcon />
-        </a>
-      )
-    }
-    {
-      bandSpotify && (
-        <a href={bandSpotify} target="_blank">
-          <SpotifyIcon />
-        </a>
-      )
-    }
+    <div class="card-socials">
+      {
+        bandFacebook && (
+          <a class="card-social-link" href={bandFacebook} target="_blank">
+            <FacebookIcon />
+          </a>
+        )
+      }
+      {
+        bandInstagram && (
+          <a class="card-social-link" href={bandInstagram} target="_blank">
+            <InstagramIcon />
+          </a>
+        )
+      }
+      {
+        bandSpotify && (
+          <a class="card-social-link" href={bandSpotify} target="_blank">
+            <SpotifyIcon />
+          </a>
+        )
+      }
+    </div>
   </div>
 </li>
 
-<style>
+<style is:global>
   .card {
+    max-width: calc(100% - 1rem);
     border: 1px solid var(--dark);
     background-color: var(--darker);
   }
   .card-img {
     width: 100%;
-    height: 0;
-    padding-top: 66.6%;
     background: var(--black);
     border-bottom: 1px solid var(--dark);
   }
   .card-content {
     padding: 0.5rem 1rem 1rem 1rem;
+    overflow-wrap: break-word;
   }
   .card-heading {
     margin: 0;
   }
   .card-heading + .card-caption {
     margin-top: 0;
+  }
+  .card .button {
+    margin-bottom: 0.75rem;
+  }
+  .card-url {
+    display: block;
+    margin-top: 0rem;
+  }
+  .card-socials {
+    margin-bottom: -0.75rem;
+  }
+  .card-social-link {
+    margin-left: -0.25rem;
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+    display: inline-block;
+  }
+  .card-social-link:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
+  .card-social-link svg path {
+    fill: currentColor;
   }
 </style>

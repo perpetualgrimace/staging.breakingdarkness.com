@@ -8,14 +8,28 @@ import Card from "./Card.astro";
     <h2 class="section-heading u-font-xl">2026 Advance Tickets & Add-Ons</h2>
     <div class="tickets-layout">
       <Button href="#" subtext="$15 plus tax">Single ticket</Button>
-      <Button href="#" subtext="$52 plus tax">Four ticket pack</Button>
       <Button href="#" subtext="$62 plus tax">Six ticket pack</Button>
       <Button href="#" subtext="$10 plus tax">VIP early entry add-on</Button>
     </div>
     <ul class="addon-deck u-list-reset">
-      <Card heading="Festival Shirt" caption="($18 PLUS TAX)" buttonUrl="#" />
-      <Card heading="Poster Kit" caption="($12 PLUS TAX)" buttonUrl="#" />
-      <Card heading="Souvenir Lanyard" caption="($8 PLUS TAX)" buttonUrl="#" />
+      <Card
+        heading="Festival Shirt"
+        imgHref="add-ons/gift-bag.jpg"
+        caption="($18 PLUS TAX)"
+        buttonUrl="#"
+      />
+      <Card
+        heading="Poster Kit"
+        imgHref="add-ons/gift-bag.jpg"
+        caption="($12 PLUS TAX)"
+        buttonUrl="#"
+      />
+      <Card
+        heading="Souvenir Lanyard"
+        imgHref="add-ons/gift-bag.jpg"
+        caption="($8 PLUS TAX)"
+        buttonUrl="#"
+      />
     </ul>
   </div>
 </section>
@@ -35,6 +49,9 @@ import Card from "./Card.astro";
     min-height: 4.2rem;
     margin: 0.5rem;
   }
+  .tickets-layout .button:last-of-type {
+    min-width: calc(100% - 1rem);
+  }
   .addon-deck {
     display: flex;
     flex-wrap: wrap;
@@ -45,8 +62,16 @@ import Card from "./Card.astro";
     flex: 1 0 auto;
     text-align: center;
   }
+  @media (min-width: 666px) {
+    .addon-deck .card {
+      max-width: calc(33.333% - 1rem);
+    }
+  }
   .addon-deck .card:first-of-type {
     flex: 1 1 auto;
+  }
+  .addon-deck .card-img {
+    width: 100%;
   }
   .addon-deck .button {
     font-size: var(--font-sm);

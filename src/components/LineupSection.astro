@@ -1,0 +1,130 @@
+---
+import Card from "./Card.astro";
+import HeadlinerCard from "./HeadlinerCard.astro";
+---
+
+<section id="lineup" class="lineup-section section">
+  <div class="u-container">
+    <h2 class="section-heading u-font-xl">2026 Festival Lineup</h2>
+    <ul class="lineup-deck u-list-reset">
+      <HeadlinerCard
+        heading="War of Ages"
+        imgHref="lineup/war-of-ages.jpg"
+        caption="War of Ages’ convictions are as deeply rooted in strength through spirit as their music is based in intensely heavy but melodic and catchy metal and hardcore. War of Ages can easily be pegged as a highly motivated and driven band. Nothing provides more irrefutable proof of their dogged determination than their impressive and extensive touring history."
+        bandUrl="warofagesmetal.com"
+        bandFacebook="https://www.facebook.com/warofages"
+        bandInstagram="https://www.instagram.com/warofages/"
+        bandSpotify="https://open.spotify.com/artist/4s407eN0H9FQyRMc1n3Spx"
+      />
+
+      <Card
+        heading="Relentless Flood"
+        imgHref="lineup/relentless-flood.jpg"
+        caption="Relentless Flood has been sharing their faith-focused blend of rock with the world for a decade, channeling hard rock grit into songs fixed on the unconditional love of Jesus in the midst of life’s storms."
+        bandFacebook="https://www.facebook.com/relentlessflood"
+        bandInstagram="https://www.instagram.com/relentlessflood/"
+        bandSpotify="https://open.spotify.com/artist/6EvpEo8wSoAZMDb3oV2y0V"
+      />
+
+      <Card
+        heading="XIII Minutes"
+        imgHref="lineup/xiii-minutes.jpg"
+        caption="XIII Minutes is an American alternative metal and metalcore band from Tulsa, Oklahoma, formed in late 2015. The band's name is inspired by the spiritual significance of the number thirteen, symbolizing spiritual fitness, great blessing, and new life. Their music blends traditional metal elements with post-hardcore and nu-metal, creating a unique sound that transcends genre definitions."
+        bandFacebook="https://www.facebook.com/xiiiminutesofficial"
+        bandInstagram="https://www.instagram.com/xiiiminutesband"
+        bandSpotify="https://open.spotify.com/artist/170qLAyfpGyLLTCu1QcDhL"
+      />
+
+      <Card
+        heading="Tricord"
+        imgHref="lineup/tricord.jpg"
+        caption="Tricord is a nu-metal band from South Georgia! Tricord offers a journey of high energy and emotion throughout their performance. Tricord's mission is to write relevant music that is engaging, yet helps cultivate a generation of believers in Jesus Christ."
+        bandUrl="tricordmusic.com"
+        bandFacebook="https://www.facebook.com/profile.php?id=100063440991793"
+        bandInstagram="https://www.instagram.com/tricordmusic/"
+        bandSpotify="https://open.spotify.com/artist/7eP9734r3WnFPuK01BvO4s"
+      />
+
+      <Card
+        heading="Matt Sassano"
+        imgHref="lineup/matt-sassano.jpg"
+        caption="Matt Sassano is redefining rock and industrial music. Born with two disabilities, Cerebral Palsy and Dyscalculia, and raised in Canisteo, New York, Sassano has turned obstacles into opportunities, channeling his resilience into high-energy performances and raw, relatable lyrics."
+        bandUrl="mattsassano.com"
+        bandFacebook="https://www.facebook.com/MattSassanoMusic"
+        bandSpotify="https://open.spotify.com/artist/57qdENESO67xX6tvTXTLtk"
+      />
+
+      <Card
+        heading="Billy James"
+        imgHref="lineup/billy-james.jpg"
+        caption="Billy James is a hip hop artist out of North Carolina who is focused on Spreading the gospel of Jesus Christ with his music and telling the power of God’s grace and ability to change people’s lives. This art is passionate and authentic worship. Billy also enjoys serving and encouraging others while growing closer in his relationship with the savior."
+        bandUrl="whoisbillyjames.com"
+        bandFacebook="https://www.facebook.com/itsbillyjames"
+        bandInstagram="https://www.instagram.com/itsbillyjames"
+        bandSpotify="https://open.spotify.com/artist/0koneS5ZCPkUliZszFG0Db"
+      />
+
+      <Card
+        heading="Counter"
+        imgHref="lineup/counter.jpg"
+        caption="Counter is a female-fronted alt metal band hailing from Western North Carolina. They've carved out a unique niche with their ”sugarcore“ sound, a captivating blend of pop vocal hooks and metalcore guitars. Imagine the vibrant energy of bands like Dream State, Lacey Sturm, The Beautiful Monument, Ignescent, Red Hook, and Eyes Set to Kill, and you're getting close to Counter’s vibe."
+        bandUrl="counter.rocks"
+        bandFacebook="https://www.facebook.com/counter.band"
+        bandInstagram="https://www.instagram.com/counter_rocks"
+        bandSpotify="https://open.spotify.com/artist/3empED35leDVVqzhoFczNW"
+      />
+
+      <Card
+        heading="Autumn Eve"
+        imgHref="lineup/autumn-eve.jpg"
+        caption="Based in Nashville, Autumn Eve is an independent rock artist who creates music to reach the brokenhearted, show those dealing with trauma that they are understood, and to give a voice to those who have experienced domestic violence and abuse. Her music style is influenced by hard rock, heavy alternative, and modern metalcore."
+        bandFacebook="https://www.facebook.com/autumnEmusic"
+        bandInstagram="https://www.instagram.com/autumn_eve_music"
+        bandSpotify="https://open.spotify.com/artist/6scuHhU7BTQgynFZ4eJWKc"
+      />
+
+      <Card
+        heading="Splitcast"
+        imgHref="lineup/splitcast.jpg"
+        caption="Born out of late 90s skate and punk rock culture, Splitcast offers a fresh take on a classic sound with engaging lyrics and thoughtful songwriting delivered via energetic punk rock anthems."
+        bandUrl="peopleofpunkrockrecords.com/band-artist.php?id=splitcast"
+        bandUrlLabel="peopleofpunkrockrecords.com"
+        bandFacebook="https://www.facebook.com/xsplitcastx"
+        bandInstagram="https://www.instagram.com/xsplitcastx"
+        bandSpotify="https://open.spotify.com/artist/3KKUGpUTbWz1uosBuXhItw"
+      />
+    </ul>
+  </div>
+</section>
+
+<style is:global>
+  .lineup-deck {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem -0.5rem 0.5rem;
+  }
+  .lineup-deck .card {
+    margin: 0.5rem;
+    flex: 1 0 auto;
+    text-align: center;
+    max-width: calc(25% - 1rem);
+  }
+  @media (max-width: 799px) {
+    .lineup-deck .card {
+      max-width: calc(50% - 1rem);
+    }
+  }
+  .lineup-deck .card-caption {
+    display: none;
+  }
+  .lineup-deck .headliner-card {
+    width: calc(100% - 1em);
+    margin: 0.5rem;
+  }
+  .lineup-deck .button {
+    font-size: var(--font-sm);
+  }
+  .lineup-deck .card {
+    text-align: left;
+  }
+</style>

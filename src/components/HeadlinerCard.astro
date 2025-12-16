@@ -1,0 +1,98 @@
+---
+import FacebookIcon from "../components/icons/FacebookIcon.astro";
+import InstagramIcon from "../components/icons/InstagramIcon.astro";
+import SpotifyIcon from "../components/icons/SpotifyIcon.astro";
+
+const { imgHref, heading, caption, bandUrl, bandFacebook, bandInstagram, bandSpotify } =
+  Astro.props;
+---
+
+<li class="headliner-card">
+  <img class="headliner-card-img" src={imgHref} draggable="false" />
+  <div class="headliner-card-content">
+    <h3 class="headliner-card-heading u-font-xl">{heading}</h3>
+    {
+      bandUrl && (
+        <a class="headliner-card-url u-font-md" href={`https://${bandUrl}`} target="_blank">
+          {bandUrl}
+        </a>
+      )
+    }
+    {caption && <p class="headliner-card-caption u-font-md">{caption}</p>}
+    <div class="headliner-card-socials">
+      {
+        bandFacebook && (
+          <a class="headliner-card-social-link" href={bandFacebook} target="_blank">
+            <FacebookIcon />
+          </a>
+        )
+      }
+      {
+        bandInstagram && (
+          <a class="headliner-card-social-link" href={bandInstagram} target="_blank">
+            <InstagramIcon />
+          </a>
+        )
+      }
+      {
+        bandSpotify && (
+          <a class="headliner-card-social-link" href={bandSpotify} target="_blank">
+            <SpotifyIcon />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</li>
+
+<style is:global>
+  .headliner-card {
+    display: flex;
+    border: 1px solid var(--dark);
+    background-color: var(--darker);
+  }
+  .headliner-card-img {
+    min-width: 50%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--black);
+    border-right: 1px solid var(--dark);
+  }
+  @media (max-width: 799px) {
+    .headliner-card {
+      flex-wrap: wrap;
+    }
+    .headliner-card-img {
+      min-width: 100%;
+      height: auto;
+    }
+  }
+  .headliner-card-content {
+    /*padding: 0.5rem 1rem 1rem 1rem;*/
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .headliner-card-heading {
+    margin: 0;
+  }
+  .headliner-card-url {
+    margin-bottom: 0.25rem;
+  }
+  .headliner-card-heading + .headliner-card-caption {
+    margin-top: 0;
+  }
+  .headliner-card-social-link {
+    margin-left: -0.25rem;
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+    display: inline-block;
+  }
+  .headliner-card-social-link:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
+  .headliner-card-social-link svg path {
+    fill: currentColor;
+  }
+</style>
