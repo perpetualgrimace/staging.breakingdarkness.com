@@ -1,0 +1,118 @@
+---
+const lineup2025 = [
+  "Disciple",
+  "Counter",
+  "Set for the Fall",
+  "Igniting the Sky",
+  "Saving Darkness",
+  "Ignescent",
+  "Cleansing of the Temple",
+  "Tricord",
+  "Jennifer Alvarado",
+];
+const gallery2025 = [
+  "Disciple",
+  "The crowd during Disciple",
+  "Ignescent",
+  "Cleansing the Temple",
+  "Counter",
+  "Tricord",
+  "Fans at the event",
+  "Safe Harbor of NC sponsor booth",
+  "Enjoying the bar and vendors in between bands",
+];
+
+const lineup2024 = ["Seventh Day Slumber", "Sond", "Counter", "Magdalene Rose"];
+const gallery2024 = [
+  "Seventh Day Slumber",
+  "The crowd during Seventh Day Slumber",
+  "Magdalene Rose",
+  "Sond",
+  "Counter",
+  "Counter in prayer before taking the stage",
+];
+---
+
+<section id="past-events" class="past-events-section section">
+  <h2 class="section-heading u-font-xl">Past Events</h2>
+
+  <div class="past-events-wrapper">
+    <h3 class="past-events-subhead u-font-lg">2025 Breaking Darkness Festival</h3>
+    <ul class="past-events-list u-font-md u-list-reset">
+      {lineup2025.map((artist) => <li class="past-events-item">{artist}</li>)}
+    </ul>
+
+    <div class="past-events-gallery">
+      {
+        gallery2025.map((photo, i) => (
+          <img
+            src={`2025/2025-${i + 1}-thumb.jpg`}
+            srcset={`2025/2025-${i + 1}-thumb.jpg 1x, 2025/2025-${i + 1}-thumb@2x.jpg 2x`}
+            alt={photo}
+            draggable="false"
+          />
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="past-events-wrapper">
+    <h3 class="past-events-subhead u-font-lg">2024 Breaking Darkness Festival</h3>
+    <ul class="past-events-list u-font-md u-list-reset">
+      {lineup2024.map((artist) => <li class="past-events-item">{artist}</li>)}
+    </ul>
+
+    <div class="past-events-gallery">
+      {
+        gallery2024.map((photo, i) => (
+          <img
+            src={`2024/2024-${i + 1}-thumb.jpg`}
+            srcset={`2024/2024-${i + 1}-thumb.jpg 1x, 2024/2024-${i + 1}-thumb@2x.jpg 2x`}
+            alt={photo}
+            draggable="false"
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .past-events-wrapper {
+    text-align: center;
+    margin-top: -1rem;
+  }
+  .past-events-wrapper + .past-events-wrapper {
+    margin-top: 1.5rem;
+  }
+  .past-events-subhead {
+    color: var(--accent);
+    margin-bottom: -0.5rem;
+  }
+  .past-events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .past-events-item:not(:last-of-type):after {
+    content: "•";
+    margin: 0.5rem;
+    color: var(--accent);
+  }
+  .past-events-gallery {
+    display: flex;
+    flex-wrap: column;
+    flex-wrap: wrap;
+    width: calc(100% + 1rem);
+    margin-left: -0.5rem;
+  }
+  .past-events-gallery img {
+    flex: 1 1 14rem;
+    margin: 0.5rem;
+    width: calc(33.333% - 1rem);
+
+    @media (min-width: 1600px) {
+      max-width: calc(20% - 1rem);
+    }
+  }
+</style>
