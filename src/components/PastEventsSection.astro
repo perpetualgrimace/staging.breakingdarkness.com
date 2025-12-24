@@ -45,12 +45,14 @@ const gallery2024 = [
     <div class="past-events-gallery">
       {
         gallery2025.map((photo, i) => (
-          <img
-            src={`2025/2025-${i + 1}-thumb.jpg`}
-            srcset={`2025/2025-${i + 1}-thumb.jpg 1x, 2025/2025-${i + 1}-thumb@2x.jpg 2x`}
-            alt={photo}
-            draggable="false"
-          />
+          <a class="past-events-link" href={`2025/2025-${i + 1}.jpg`}>
+            <img
+              src={`2025/2025-${i + 1}-thumb.jpg`}
+              srcset={`2025/2025-${i + 1}-thumb.jpg 1x, 2025/2025-${i + 1}-thumb@2x.jpg 2x`}
+              alt={photo}
+              draggable="false"
+            />
+          </a>
         ))
       }
     </div>
@@ -65,12 +67,14 @@ const gallery2024 = [
     <div class="past-events-gallery">
       {
         gallery2024.map((photo, i) => (
-          <img
-            src={`2024/2024-${i + 1}-thumb.jpg`}
-            srcset={`2024/2024-${i + 1}-thumb.jpg 1x, 2024/2024-${i + 1}-thumb@2x.jpg 2x`}
-            alt={photo}
-            draggable="false"
-          />
+          <a class="past-events-link" href={`2024/2024-${i + 1}.jpg`}>
+            <img
+              src={`2024/2024-${i + 1}-thumb.jpg`}
+              srcset={`2024/2024-${i + 1}-thumb.jpg 1x, 2024/2024-${i + 1}-thumb@2x.jpg 2x`}
+              alt={photo}
+              draggable="false"
+            />
+          </a>
         ))
       }
     </div>
@@ -81,6 +85,9 @@ const gallery2024 = [
   .past-events-wrapper {
     text-align: center;
     margin-top: -1rem;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .past-events-wrapper + .past-events-wrapper {
     margin-top: 1.5rem;
@@ -106,13 +113,25 @@ const gallery2024 = [
     width: calc(100% + 1rem);
     margin-left: -0.5rem;
   }
-  .past-events-gallery img {
+  .past-events-link {
     flex: 1 1 14rem;
     margin: 0.5rem;
     width: calc(33.333% - 1rem);
 
-    @media (min-width: 1600px) {
+    @media (min-width: 1300px) {
       max-width: calc(20% - 1rem);
     }
+
+    @media (min-width: 1660px) {
+      max-width: calc(25% - 1rem);
+    }
+  }
+  @media (min-width: 1300px) {
+    .past-events-wrapper:last-of-type .past-events-link {
+      max-width: calc(16.666% - 1rem);
+    }
+  }
+  .past-events-link img {
+    width: 100%;
   }
 </style>
