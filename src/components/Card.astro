@@ -20,7 +20,9 @@ const {
 ---
 
 <li class="card">
-  <img class="card-img" src={imgHref} draggable="false" loading="lazy" />
+  <div class="card-img">
+    <img class="card-img-inner" src={imgHref} draggable="false" loading="lazy" />
+  </div>
   <div class="card-content">
     <h3 class="card-heading u-font-lg">{heading}</h3>
     {
@@ -67,6 +69,9 @@ const {
     max-width: calc(100% - 1rem);
     border: 1px solid var(--dark);
     background-color: var(--darker);
+  }
+  .card-img-inner {
+    display: block;
   }
   .card-img {
     width: 100%;

@@ -14,19 +14,19 @@ import Card from "./Card.astro";
     <ul class="addon-deck u-list-reset">
       <Card
         heading="Festival Shirt"
-        imgHref="add-ons/gift-bag.jpg"
+        imgHref="add-ons/shirt-front.jpg"
         caption="($18 PLUS TAX)"
         buttonUrl="#"
       />
       <Card
         heading="Poster Kit"
-        imgHref="add-ons/gift-bag.jpg"
+        imgHref="add-ons/poster-kit.jpg"
         caption="($12 PLUS TAX)"
         buttonUrl="#"
       />
       <Card
         heading="Souvenir Lanyard"
-        imgHref="add-ons/gift-bag.jpg"
+        imgHref="add-ons/lanyard.jpg"
         caption="($8 PLUS TAX)"
         buttonUrl="#"
       />
@@ -72,8 +72,30 @@ import Card from "./Card.astro";
   }
   .addon-deck .card-img {
     width: 100%;
+    position: relative;
   }
   .addon-deck .button {
     font-size: var(--font-sm);
+  }
+
+  /* shirt go brrr */
+  .addon-deck .card:first-of-type .card-img:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(add-ons/shirt-back.jpg);
+    background-size: cover;
+    opacity: 0;
+    will-change: transform;
+    transform: rotateY(30deg);
+    transition: transform 0.2s ease-out;
+  }
+  .addon-deck .card:first-of-type .card-img:hover:after {
+    opacity: 1;
+    transform: none;
   }
 </style>
