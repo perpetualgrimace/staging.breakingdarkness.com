@@ -1,34 +1,37 @@
 ---
 import Button from "./Button.astro";
 import Card from "./Card.astro";
+
+const ticketLink =
+  "https://www.eventbrite.com/e/breaking-darkness-music-festival-2026-tickets-1977786723330";
 ---
 
 <section id="tickets" class="tickets-section section">
   <div class="u-container">
     <h2 class="section-heading u-font-xl">2026 Advance Tickets & Add-Ons</h2>
     <div class="tickets-layout">
-      <Button href="#" subtext="$15 plus tax">Single ticket</Button>
-      <Button href="#" subtext="$62 plus tax">Six ticket pack</Button>
-      <Button href="#" subtext="$10 plus tax">VIP early entry add-on</Button>
+      <Button href={ticketLink} subtext="$15 plus tax">Single ticket</Button>
+      <Button href={ticketLink} subtext="$62 plus tax">Six ticket pack</Button>
+      <Button href={ticketLink} subtext="$10 plus tax">VIP early entry add-on</Button>
     </div>
     <ul class="addon-deck u-list-reset">
       <Card
         heading="Festival Shirt"
         imgHref="add-ons/shirt-front.jpg"
         caption="($18 PLUS TAX)"
-        buttonUrl="#"
+        buttonUrl={ticketLink}
       />
       <Card
         heading="Poster Kit"
         imgHref="add-ons/poster-kit.jpg"
         caption="($12 PLUS TAX)"
-        buttonUrl="#"
+        buttonUrl={ticketLink}
       />
       <Card
         heading="Souvenir Lanyard"
         imgHref="add-ons/lanyard.jpg"
         caption="($8 PLUS TAX)"
-        buttonUrl="#"
+        buttonUrl={ticketLink}
       />
     </ul>
   </div>
