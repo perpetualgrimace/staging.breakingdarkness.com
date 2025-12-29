@@ -17,7 +17,7 @@ const ticketLink =
     <ul class="addon-deck u-list-reset">
       <Card
         heading="Festival Shirt"
-        imgHref="add-ons/shirt-front.jpg"
+        imgHref="add-ons/shirt.jpg"
         caption="($18 PLUS TAX)"
         buttonUrl={ticketLink}
       />
@@ -79,26 +79,5 @@ const ticketLink =
   }
   .addon-deck .button {
     font-size: var(--font-sm);
-  }
-
-  /* shirt go brrr */
-  .addon-deck .card:first-of-type .card-img:after {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url(add-ons/shirt-back.jpg);
-    background-size: cover;
-    opacity: 0;
-    will-change: transform;
-    transform: rotateY(30deg);
-    transition: transform 0.2s ease-out;
-  }
-  .addon-deck .card:first-of-type .card-img:hover:after {
-    opacity: 1;
-    transform: none;
   }
 </style>
