@@ -22,6 +22,13 @@ import Socials from "../components/Socials.astro";
         </h1>
 
         <p class="u-font-lg">All ticket proceeds benefit Christian outreach for drug addiction.</p>
+
+        <img
+          class="hero-lockup-logos"
+          src="hero-logos.png"
+          srcset="hero-logos.png 1x, hero-logos@2x.png 2x"
+          alt="Beneficiaries include the foundry house, bethel colony of mercy, and recovery NC."
+        />
       </div>
     </div>
 
@@ -43,9 +50,13 @@ import Socials from "../components/Socials.astro";
     margin-right: auto;
     min-height: calc(40vh + 10vw);
     background-image: url("/hero-bg@2x.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 100% 90%;
+
+    @media (min-width: 600px) {
+      background-size: contain;
+    }
 
     @media (min-width: 750px) {
       padding-top: 7rem;
@@ -57,9 +68,9 @@ import Socials from "../components/Socials.astro";
   }
   .hero-lockup {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    width: 35rem;
+    width: 62rem;
     max-width: 100%;
   }
   .hero-lockup-logo {
@@ -74,6 +85,9 @@ import Socials from "../components/Socials.astro";
   }
   .hero-lockup-heading {
     margin-top: 0;
+  }
+  .hero-lockup-logos {
+    margin-bottom: 1.25rem;
   }
   .hero-cta {
     margin-bottom: 2rem;
