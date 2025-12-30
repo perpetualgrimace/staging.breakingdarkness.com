@@ -27,29 +27,36 @@ import Button from "./Button.astro";
           loading="lazy"></iframe>
       </div>
     </div>
-    <div class="etc-mobile-buttons">
+    <div class="etc-mobile-layout">
       <Button href="flyer@2x.jpg">View flyer</Button>
-      <Button
-        href="https://open.spotify.com/playlist/4JEmEpT6PPyAW6jPARE6mO?si=hLBhAgmARRaOuOdJItLGfQ"
-      >
-        Artist playlist
-      </Button>
+      <iframe
+        class="etc-mobile-playlist-iframe"
+        data-testid="embed-iframe"
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/4JEmEpT6PPyAW6jPARE6mO?utm_source=generator"
+        width="100%"
+        height="180"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
     </div>
   </div>
 </section>
 
 <style is:global>
-  .etc-mobile-buttons {
+  .etc-mobile-layout {
     margin-top: 1rem;
   }
-  .etc-mobile-buttons .button {
+  .etc-mobile-layout .button {
     display: block;
+    margin-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
   }
-  .etc-mobile-buttons .button:first-child {
-    margin-bottom: 1rem;
+  .etc-mobile-playlist-iframe {
+    margin-bottom: -2rem;
   }
 
   @media (max-width: 579px) {
@@ -58,7 +65,7 @@ import Button from "./Button.astro";
     }
   }
   @media (min-width: 580px) {
-    .etc-mobile-buttons {
+    .etc-mobile-layout {
       display: none;
     }
     .etc-layout {

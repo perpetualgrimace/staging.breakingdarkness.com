@@ -8,11 +8,15 @@ const ticketLink =
 
 <section id="tickets" class="tickets-section section">
   <div class="u-container">
-    <h2 class="section-heading u-font-xl">2026 Advance Tickets & Add-Ons</h2>
+    <h2 class="section-heading u-font-xl">2026 Tickets & Add-Ons</h2>
     <div class="tickets-layout">
-      <Button href={ticketLink} subtext="$15 plus tax">Single ticket</Button>
-      <Button href={ticketLink} subtext="$62 plus tax">Six ticket pack</Button>
-      <Button href={ticketLink} subtext="$10 plus tax">VIP early entry add-on</Button>
+      <Button href={ticketLink} subtext="Limited edition">Early Admission Ticket + Swag Bag</Button>
+      <Button href={ticketLink} subtext="30% Off — purchase before May 1">
+        Discount Advanced Ticket
+      </Button>
+      <Button href={ticketLink} subtext="20% off — Discount Advance Ticket">
+        4 pack advanced ticket
+      </Button>
     </div>
     <ul class="addon-deck u-list-reset">
       <Card
@@ -46,13 +50,13 @@ const ticketLink =
   .tickets-layout .button {
     display: flex;
     flex-direction: column;
-    flex: 1 0 14rem;
+    flex: 1 0 19rem;
     align-items: center;
     justify-content: center;
     min-height: 4.2rem;
     margin: 0.5rem;
   }
-  .tickets-layout .button:last-of-type {
+  .tickets-layout .button:first-of-type {
     min-width: calc(100% - 1rem);
   }
   .addon-deck {
