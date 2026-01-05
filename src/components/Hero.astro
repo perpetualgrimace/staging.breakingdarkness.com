@@ -23,12 +23,27 @@ import Socials from "../components/Socials.astro";
 
         <p class="u-font-lg">All ticket proceeds benefit Christian outreach for drug addiction.</p>
 
-        <img
+        <svg
           class="hero-lockup-logos"
-          src="hero-logos.png"
-          srcset="hero-logos.png 1x, hero-logos@2x.png 2x"
-          alt="Beneficiaries include the foundry house, bethel colony of mercy, and recovery NC."
-        />
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 380 38"
+        >
+          <image width="380" height="38" xlink:href="hero-logos@2x.png" />
+          <a xlink:href="https://foundryhouse.org" target="_blank">
+            <title>The Foundry House</title>
+            <rect x="0" y="0" fill="#fff" opacity="0" width="114" height="38"></rect>
+          </a>
+          <a xlink:href="https://bethelcolony.org/" target="_blank">
+            <title>Bethel Colony</title>
+            <rect x="123" y="0" fill="#fff" opacity="0" width="108" height="38"></rect>
+          </a>
+          <a xlink:href="https://www.recoverynorthcarolina.org/" target="_blank">
+            <title>Recovery North Carolina</title>
+            <rect x="246" y="0" fill="#fff" opacity="0" width="134" height="38"></rect>
+          </a>
+        </svg>
       </div>
     </div>
 
@@ -87,6 +102,8 @@ import Socials from "../components/Socials.astro";
     margin-top: 0;
   }
   .hero-lockup-logos {
+    width: 380px;
+    max-width: 100%;
     margin-bottom: 1.25rem;
   }
   .hero-cta {
