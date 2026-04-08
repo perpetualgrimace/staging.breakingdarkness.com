@@ -48,7 +48,12 @@ import Socials from "../components/Socials.astro";
     </div>
 
     <p class="hero-cta">
-      <Button href="#tickets">Buy tickets</Button> or <a href="#contact">get directions to venue</a>
+      <Button href="#tickets"> Buy tickets </Button> or <Button
+        href="https://givebutter.com/xGcKlO"
+      >
+        Donate
+      </Button>
+      <!-- <a href="#contact">get directions to venue</a> -->
     </p>
 
     <Socials />
@@ -109,7 +114,17 @@ import Socials from "../components/Socials.astro";
   .hero-cta {
     margin-bottom: 2rem;
   }
-  .hero-cta .button {
-    margin-right: 0.25rem;
+  @media (max-width: 399px) {
+    .hero-cta .button {
+      margin-bottom: 0.5rem;
+    }
+  }
+  @media (min-width: 400px) {
+    .hero-cta .button {
+      margin-right: 0.25rem;
+    }
+    .hero-cta .button:last-child {
+      margin-left: 0.25rem;
+    }
   }
 </style>
