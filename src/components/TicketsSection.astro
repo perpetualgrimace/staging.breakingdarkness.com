@@ -1,6 +1,7 @@
 ---
 import Button from "./Button.astro";
 import Card from "./Card.astro";
+import SponsorCard from "./SponsorCard.astro";
 
 const ticketLink =
   "https://www.eventbrite.com/e/breaking-darkness-music-festival-2026-tickets-1977786723330";
@@ -38,16 +39,18 @@ const ticketLink =
         buttonUrl={ticketLink}
       />
     </ul>
-
-    <div class="donate-section">
-      <h2 class="u-font-xl">Support Breaking Darkness</h2>
-      <p>
-        All ticket proceeds benefit Christian outreach organizations, but you can also make a tax
-        deductable charitable donation to help cover the costs of running the festival.
-      </p>
-
-      <Button href="https://givebutter.com/xGcKlO"> Make a charitable donation </Button>
-    </div>
+  </div>
+  <div class="u-container">
+    <ul class="accomodation-deck">
+      <SponsorCard
+        imgHref="add-ons/best-western@2x.jpg"
+        heading="2026 Festival Accomodation"
+        caption="Breaking Darkness Music Festival attendees get 20% OFF discount room rate at Best Western in Hickory, NC (located 8 minutes from the venue). Call 828-323-1150 and mention “Breaking Darkness Music Fest” or use the following button to make your reservation:"
+        sponsorUrl="https://www.bestwestern.com/en_US/book/hotel-rooms.34163.html?groupId=1L2FA3P4"
+        buttonText="Book your hotel room"
+        buttonSubtext="20% off rack rate"
+      />
+    </ul>
   </div>
 </section>
 
@@ -57,13 +60,16 @@ const ticketLink =
     flex-wrap: wrap;
     margin: -0.5rem;
   }
-  .tickets-layout .button {
+  .tickets-layout .button,
+  .accomodation-deck .button {
     display: flex;
     flex-direction: column;
     flex: 1 0 19rem;
     align-items: center;
     justify-content: center;
     min-height: 4.2rem;
+  }
+  .tickets-layout .button {
     margin: 0.5rem;
   }
   .tickets-layout .button:first-of-type {
@@ -95,16 +101,11 @@ const ticketLink =
     font-size: var(--font-sm);
   }
 
-  .donate-section {
-    text-align: center;
-    margin: auto;
-    width: 800px;
-    max-width: 100%;
-  }
-  .donate-section h2 {
-    margin-bottom: 0.5rem;
-  }
-  .donate-section p {
+  .accomodation-deck {
+    padding-left: 0;
     margin-top: 0;
+  }
+  .accomodation-deck .button {
+    max-height: 4.2rem;
   }
 </style>

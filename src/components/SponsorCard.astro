@@ -1,0 +1,74 @@
+---
+import Button from "../components/Button.astro";
+
+const { imgHref, heading, caption, sponsorUrl, buttonText, buttonSubtext } = Astro.props;
+---
+
+<li class="sponsor-card">
+  <img class="sponsor-card-img" src={imgHref} draggable="false" />
+  <div class="sponsor-card-content">
+    <h3 class="sponsor-card-heading u-font-xl">{heading}</h3>
+    {caption && <p class="sponsor-card-caption u-font-md">{caption}</p>}
+    {
+      sponsorUrl && (
+        <Button href={sponsorUrl} subtext={buttonSubtext}>
+          {buttonText}
+        </Button>
+      )
+    }
+  </div>
+</li>
+
+<style is:global>
+  .sponsor-card {
+    display: flex;
+    border: 1px solid var(--dark);
+    background-color: var(--darker);
+  }
+  .sponsor-card-img {
+    min-width: 50%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--black);
+    border-right: 1px solid var(--dark);
+  }
+  @media (max-width: 799px) {
+    .sponsor-card {
+      flex-wrap: wrap;
+    }
+    .sponsor-card-img {
+      min-width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--dark);
+    }
+  }
+  .sponsor-card-content {
+    /*padding: 0.5rem 1rem 1rem 1rem;*/
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sponsor-card-heading {
+    margin: 0 0 1rem 0;
+  }
+  .sponsor-card-url {
+    margin-bottom: 0.25rem;
+  }
+  .sponsor-card-heading + .sponsor-card-caption {
+    margin-top: 0;
+  }
+  .sponsor-card-social-link {
+    margin-left: -0.25rem;
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+    display: inline-block;
+  }
+  .sponsor-card-social-link:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
+  .sponsor-card-social-link svg path {
+    fill: currentColor;
+  }
+</style>
