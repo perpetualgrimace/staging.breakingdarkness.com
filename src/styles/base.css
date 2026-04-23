@@ -10,6 +10,10 @@
   --accent-bright: #65c8e2;
   --accent-glow: rgba(45, 175, 208, 0.5);
 
+  --accent-secondary: #ccff66;
+  --accent-secondary-bright: #d8ff8a;
+  --accent-secondary-glow: rgba(204, 255, 102, 0.5);
+
   --font-stack: "PT Sans", system-ui, Helvetica, sans-serif;
   --default-weight: 400;
   --heading-weight: 700;

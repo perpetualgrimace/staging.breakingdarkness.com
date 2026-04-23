@@ -5,126 +5,165 @@ import Socials from "../components/Socials.astro";
 
 <header class="hero" role="banner">
   <div class="hero-inner u-container">
-    <div class="hero-lockup">
+    <div class="hero-main">
       <img
-        class="hero-lockup-logo"
-        src="logo.png"
-        srcset="logo.png 1x, logo@2x.png 2x"
-        width="281"
+        class="hero-logo"
+        src="logo-horizontal.png"
+        srcset="logo-horizontal.png 1x, logo-horizontal@2x.png 2x"
+        width="666"
         alt=""
         draggable="false"
       />
+      <img class="hero-logo-mobile" src="logo@2x.png" width="220" alt="" draggable="false" />
 
-      <div class="hero-lockup-text">
-        <h1 class="hero-lockup-heading u-heading u-font-xl">
-          <span class="u-visually-hidden">Breaking Darkness Music Festival: </span>
-          Promoting Unity, Fellowship, Hope, and Redemption
-        </h1>
+      <h1 class="hero-lockup-heading u-heading u-font-lg">
+        <span class="u-visually-hidden">Breaking Darkness Music Festival: </span>
+        Promoting Unity, Fellowship, Hope & Redemption
+      </h1>
 
-        <p class="u-font-lg">All ticket proceeds benefit Christian outreach for drug addiction.</p>
+      <Socials />
 
-        <svg
-          class="hero-lockup-logos"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 380 38"
-        >
-          <image width="380" height="38" xlink:href="hero-logos@2x.png" />
-          <a xlink:href="https://foundryhouse.org" target="_blank">
-            <title>The Foundry House</title>
-            <rect x="0" y="0" fill="#fff" opacity="0" width="114" height="38"></rect>
-          </a>
-          <a xlink:href="https://bethelcolony.org/" target="_blank">
-            <title>Bethel Colony</title>
-            <rect x="123" y="0" fill="#fff" opacity="0" width="108" height="38"></rect>
-          </a>
-          <a xlink:href="https://www.recoverynorthcarolina.org/" target="_blank">
-            <title>Recovery North Carolina</title>
-            <rect x="246" y="0" fill="#fff" opacity="0" width="134" height="38"></rect>
-          </a>
-        </svg>
-      </div>
+      <svg
+        class="hero-main-logos"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 380 38"
+      >
+        <image width="380" height="38" xlink:href="hero-logos@2x.png" />
+        <a xlink:href="https://foundryhouse.org" target="_blank">
+          <title>The Foundry House</title>
+          <rect x="0" y="0" fill="#fff" opacity="0" width="114" height="38"></rect>
+        </a>
+        <a xlink:href="https://bethelcolony.org/" target="_blank">
+          <title>Bethel Colony</title>
+          <rect x="123" y="0" fill="#fff" opacity="0" width="108" height="38"></rect>
+        </a>
+        <a xlink:href="https://www.recoverynorthcarolina.org/" target="_blank">
+          <title>Recovery North Carolina</title>
+          <rect x="246" y="0" fill="#fff" opacity="0" width="134" height="38"></rect>
+        </a>
+      </svg>
     </div>
 
-    <p class="hero-cta">
-      <Button href="#tickets"> Buy tickets </Button> or <Button
-        href="https://givebutter.com/xGcKlO"
-      >
-        Donate
-      </Button>
-      <!-- <a href="#contact">get directions to venue</a> -->
-    </p>
+    <div class="hero-cta">
+      <div class="hero-cta-col">
+        <h2 class="u-font-xl">Get Your Ticket</h2>
 
-    <Socials />
+        <p class="u-font-md">
+          All ticket proceeds are donated to Christian outreach for drug addiction
+        </p>
+
+        <Button href="#tickets"> Buy tickets </Button>
+      </div>
+
+      <div class="hero-cta-col">
+        <h2 class="u-font-xl">Join The Mission</h2>
+
+        <p class="u-font-md">
+          Make a tax deductable charitable donation to help cover the costs of the festival
+        </p>
+
+        <Button href="https://givebutter.com/xGcKlO">Donate</Button>
+      </div>
+    </div>
   </div>
 </header>
 
 <style is:global>
   .hero {
-    display: flex;
+    position: relative;
     padding: 3rem 1rem;
     width: 100%;
     max-width: 1940px;
     margin-left: auto;
     margin-right: auto;
-    min-height: calc(40vh + 10vw);
-    background-image: url("/hero-bg@2x.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 100% 90%;
-
-    @media (min-width: 600px) {
-      background-size: contain;
-    }
 
     @media (min-width: 750px) {
       padding-top: 7rem;
     }
+  }
+  .hero:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("/hero-bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    opacity: 0.666;
+  }
 
-    @media (min-width: 900px) {
-      background-size: 55%;
-    }
+  .hero-main {
+    text-align: center;
   }
-  .hero-lockup {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 62rem;
-    max-width: 100%;
-  }
-  .hero-lockup-logo {
-    flex: 0 0 14rem;
-    margin-right: 2rem;
-    margin-bottom: 1.25rem;
-    width: 14rem;
-    height: auto;
-  }
-  .hero-lockup-text {
-    flex: 1 1 19rem;
-  }
-  .hero-lockup-heading {
+  .hero-main .socials {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
   }
-  .hero-lockup-logos {
-    width: 380px;
+  .hero-main-logos {
+    width: 333px;
     max-width: 100%;
     margin-bottom: 1.25rem;
   }
+
   .hero-cta {
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    width: 980px;
+    max-width: 100%;
+    margin: auto;
   }
-  @media (max-width: 399px) {
-    .hero-cta .button {
-      margin-bottom: 0.5rem;
+  .hero-cta-col {
+    width: 33.3%;
+    margin-bottom: 1rem;
+  }
+  .hero-cta-col:first-child {
+    text-align: right;
+  }
+  .hero-cta-col:last-child .button {
+    --accent: var(--accent-secondary);
+    --accent-bright: var(--accent-secondary-bright);
+    --accent-glow: var(--accent-secondary-glow);
+    min-width: 190px;
+    text-align: center;
+  }
+  .hero-cta-col h2 {
+    margin-bottom: 0;
+  }
+  .hero-cta-col p {
+    margin-bottom: 1.33rem;
+  }
+
+  /* responsive tweaks */
+  @media (min-width: 620px) {
+    .hero-logo-mobile {
+      display: none;
     }
   }
-  @media (min-width: 400px) {
-    .hero-cta .button {
-      margin-right: 0.25rem;
+  @media (max-width: 619px) {
+    .hero-logo {
+      display: none;
     }
-    .hero-cta .button:last-child {
-      margin-left: 0.25rem;
+    .hero:after {
+      opacity: 0.4;
+    }
+    .hero-cta {
+      flex-direction: column-reverse;
+    }
+    .hero-cta-col {
+      width: 100%;
+      text-align: center !important;
+    }
+    .hero-cta-col .button {
+      width: 100%;
     }
   }
 </style>
