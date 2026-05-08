@@ -10,11 +10,21 @@ import HeadlinerCard from "./HeadlinerCard.astro";
       <HeadlinerCard
         heading="War of Ages"
         imgHref="lineup/war-of-ages.jpg"
-        caption="War of Ages’ convictions are as deeply rooted in strength through spirit as their music is based in intensely heavy but melodic and catchy metal and hardcore. War of Ages can easily be pegged as a highly motivated and driven band. Nothing provides more irrefutable proof of their dogged determination than their impressive and extensive touring history."
+        caption="War of Ages’ convictions are as deeply rooted in strength through spirit as their music is based in intensely heavy but melodic and catchy metal and hardcore."
         bandUrl="warofagesmetal.com"
         bandFacebook="https://www.facebook.com/warofages"
         bandInstagram="https://www.instagram.com/warofages/"
         bandSpotify="https://open.spotify.com/artist/4s407eN0H9FQyRMc1n3Spx"
+      />
+
+      <Card
+        heading="Convictions"
+        imgHref="lineup/convictions.jpg"
+        caption="Convictions is an Ohio metalcore band formed in 2012, recognized for their blend of emotional heaviness, spiritual themes, and unfiltered honesty. With years of touring and multiple releases behind them, the band has carved out a loyal following through their intense live shows and deeply personal songwriting."
+        bandUrl="convictionsrock.com"
+        bandFacebook="https://www.facebook.com/ConvictionsRock"
+        bandInstagram="https://www.instagram.com/convictionsband/"
+        bandSpotify="https://open.spotify.com/artist/0PNbGkwlV3farYnmoojYAY"
       />
 
       <Card
@@ -110,7 +120,7 @@ import HeadlinerCard from "./HeadlinerCard.astro";
     text-align: center;
     max-width: calc(25% - 1rem);
   }
-  @media (max-width: 799px) {
+  @media (max-width: 899px) {
     .lineup-deck .card {
       max-width: calc(50% - 1rem);
     }
@@ -122,6 +132,19 @@ import HeadlinerCard from "./HeadlinerCard.astro";
     width: calc(100% - 1em);
     margin: 0.5rem;
   }
+  @media (min-width: 900px) {
+    .lineup-deck .headliner-card {
+      width: calc(75% - 1em);
+      margin: 0.5rem;
+    }
+  }
+  @media (max-width: 799px) {
+    .lineup-deck .headliner-card + .card {
+      min-width: calc(100% - 1em);
+      margin: 0.5rem;
+    }
+  }
+
   .lineup-deck .button {
     font-size: var(--font-sm);
   }
