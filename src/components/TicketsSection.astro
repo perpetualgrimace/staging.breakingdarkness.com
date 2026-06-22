@@ -12,18 +12,22 @@ const ticketLink =
     <h2 class="section-heading u-font-xl">2026 Tickets & Add-Ons</h2>
     <div class="tickets-layout">
       <Button href={ticketLink} subtext="Limited edition">Early Admission Ticket + Swag Bag</Button>
-      <Button href={ticketLink} subtext="30% Off — purchase before May 1">
-        Discount Advanced Ticket
-      </Button>
-      <Button href={ticketLink} subtext="20% off — Discount Advance Ticket">
+      <Button href={ticketLink} subtext="20% Off — Door pricing"> Advanced Ticket </Button>
+      <Button href={ticketLink} subtext="20% off — Advanced Ticket">
         4 pack advanced ticket
       </Button>
     </div>
     <ul class="addon-deck u-list-reset">
       <Card
         heading="Festival Shirt"
-        imgHref="add-ons/shirt.jpg"
+        imgHref="add-ons/shirt-1.png"
         caption="($18 PLUS TAX)"
+        buttonUrl={ticketLink}
+      />
+      <Card
+        heading="Heavy Worship Shirt"
+        imgHref="add-ons/shirt-2.png"
+        caption="($20 PLUS TAX)"
         buttonUrl={ticketLink}
       />
       <Card
@@ -85,9 +89,14 @@ const ticketLink =
     flex: 1 0 auto;
     text-align: center;
   }
-  @media (min-width: 666px) {
+  @media (min-width: 500px) {
     .addon-deck .card {
-      max-width: calc(33.333% - 1rem);
+      max-width: calc(50% - 1rem);
+    }
+  }
+  @media (min-width: 1060px) {
+    .addon-deck .card {
+      max-width: calc(25% - 1rem);
     }
   }
   .addon-deck .card:first-of-type {
