@@ -4,7 +4,21 @@ import Button from "./Button.astro";
 
 <section class="etc-section section">
   <div class="u-container">
-    <div class="etc-layout">
+    <div class="etc-video-wrapper">
+      <iframe
+        class="etc-video"
+        width="585"
+        height="1040"
+        src="https://www.youtube.com/embed/IdD9qgnZMfY"
+        title="BDarkness2027 teaser"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- <div class="etc-layout">
       <div class="etc-flyer">
         <img
           class="etc-flyer-img"
@@ -40,11 +54,26 @@ import Button from "./Button.astro";
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-    </div>
+    </div> -->
   </div>
 </section>
 
 <style is:global>
+  .etc-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  .etc-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
   .etc-mobile-layout {
     margin-top: 1rem;
   }
