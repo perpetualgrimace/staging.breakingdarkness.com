@@ -1,4 +1,29 @@
 ---
+const lineup2026 = [
+  "Convictions",
+  "Relentless Flood",
+  "XIII Minutes",
+  "Tricord",
+  "Irae",
+  "Matt Sassano",
+  "Billy James",
+  "Counter",
+  "Autumn Eve",
+  "Splitcast",
+];
+const gallery2026 = [
+  "Convictions",
+  "Relentless Flood",
+  "XIII Minutes",
+  "Tricord",
+  "Irae",
+  "Matt Sassano",
+  "Counter",
+  "Autumn Eve",
+  "Splitcast",
+  "Westminster Effects sponsor booth",
+  "Bethel Colony of Mercy sponsor booth",
+];
 const lineup2025 = [
   "Disciple",
   "Ignescent",
@@ -37,46 +62,68 @@ const gallery2024 = [
   <h2 class="section-heading u-font-xl">Past Events</h2>
 
   <div class="past-events-wrapper">
-    <h3 class="past-events-subhead u-font-lg">2025 Breaking Darkness Festival</h3>
+    <h3 class="past-events-subhead u-font-lg">2026 Breaking Darkness Festival</h3>
     <ul class="past-events-list u-font-md u-list-reset">
-      {lineup2025.map((artist) => <li class="past-events-item">{artist}</li>)}
+      {lineup2026.map((artist) => (
+        <li class="past-events-item">{artist}</li>
+      ))}
     </ul>
 
     <div class="past-events-gallery">
-      {
-        gallery2025.map((photo, i) => (
-          <a class="past-events-link" href={`2025/2025-${i + 1}.jpg`}>
-            <img
-              src={`2025/2025-${i + 1}-thumb.jpg`}
-              srcset={`2025/2025-${i + 1}-thumb.jpg 1x, 2025/2025-${i + 1}-thumb@2x.jpg 2x`}
-              alt={photo}
-              draggable="false"
-            />
-          </a>
-        ))
-      }
+      {gallery2026.map((photo, i) => (
+        <a class="past-events-link" href={`2026/2026-${i + 1}.jpg`}>
+          <img
+            src={`2026/2026-${i + 1}-thumb.jpg`}
+            srcset={`2026/2026-${i + 1}-thumb.jpg 1x, 2026/2026-${i + 1}-thumb@2x.jpg 2x`}
+            alt={photo}
+            draggable="false"
+          />
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="past-events-wrapper">
+    <h3 class="past-events-subhead u-font-lg">2025 Breaking Darkness Festival</h3>
+    <ul class="past-events-list u-font-md u-list-reset">
+      {lineup2025.map((artist) => (
+        <li class="past-events-item">{artist}</li>
+      ))}
+    </ul>
+
+    <div class="past-events-gallery">
+      {gallery2025.map((photo, i) => (
+        <a class="past-events-link" href={`2025/2025-${i + 1}.jpg`}>
+          <img
+            src={`2025/2025-${i + 1}-thumb.jpg`}
+            srcset={`2025/2025-${i + 1}-thumb.jpg 1x, 2025/2025-${i + 1}-thumb@2x.jpg 2x`}
+            alt={photo}
+            draggable="false"
+          />
+        </a>
+      ))}
     </div>
   </div>
 
   <div class="past-events-wrapper">
     <h3 class="past-events-subhead u-font-lg">2024 Breaking Darkness Festival</h3>
     <ul class="past-events-list u-font-md u-list-reset">
-      {lineup2024.map((artist) => <li class="past-events-item">{artist}</li>)}
+      {lineup2024.map((artist) => (
+        <li class="past-events-item">{artist}</li>
+      ))}
     </ul>
 
     <div class="past-events-gallery">
-      {
-        gallery2024.map((photo, i) => (
-          <a class="past-events-link" href={`2024/2024-${i + 1}.jpg`}>
-            <img
-              src={`2024/2024-${i + 1}-thumb.jpg`}
-              srcset={`2024/2024-${i + 1}-thumb.jpg 1x, 2024/2024-${i + 1}-thumb@2x.jpg 2x`}
-              alt={photo}
-              draggable="false"
-            />
-          </a>
-        ))
-      }
+      {gallery2024.map((photo, i) => (
+        <a class="past-events-link" href={`2024/2024-${i + 1}.jpg`}>
+          <img
+            src={`2024/2024-${i + 1}-thumb.jpg`}
+            srcset={`2024/2024-${i + 1}-thumb.jpg 1x, 2024/2024-${i + 1}-thumb@2x.jpg 2x`}
+            alt={photo}
+            draggable="false"
+          />
+        </a>
+      ))}
     </div>
   </div>
 </section>
@@ -119,11 +166,11 @@ const gallery2024 = [
     width: calc(33.333% - 1rem);
 
     @media (min-width: 1300px) {
-      max-width: calc(20% - 1rem);
+      max-width: calc(14.285% - 1rem);
     }
 
     @media (min-width: 1660px) {
-      max-width: calc(25% - 1rem);
+      max-width: calc(16.666% - 1rem);
     }
   }
   @media (min-width: 1300px) {
